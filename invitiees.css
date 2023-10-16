@@ -1,0 +1,19 @@
+#jsonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#jsonContainer>p {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: clamp(20rem, 30vw, 70rem);
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #1A283208;
+}
+
+#jsonContainer>p:nth-child(1) {
+  font-weight: bold;
+}

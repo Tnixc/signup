@@ -1,0 +1,17 @@
+[
+  {
+    "First Name": "John",
+    "Last Name": "Doe",
+    "Tag": "Employee"
+  },
+  {
+    "First Name": "Jane",
+    "Last Name": "Smith",
+    "Tag": "Customer"
+  },
+  {
+    "First Name": "Bob",
+    "Last Name": "Johnson",
+    "Tag": "Manager"
+  }
+]
