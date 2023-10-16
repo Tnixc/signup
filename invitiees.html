@@ -6,31 +6,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
-    <link
-    rel="stylesheet"
-    href="./invitiees.css"
-  />
-  <link
-  rel="stylesheet"
-  href="./universal.css"
-/>
+    <link rel="stylesheet" href="./invitiees.css" />
+    <link rel="stylesheet" href="./universal.css" />
     <title>Document</title>
   </head>
   <body>
     <nav class="container-fluid">
       <ul>
         <li>
-          <a href="./index.html" class="contrast"><strong>Main page</strong></a
-          >
+          <a href="./index.html" class="contrast"><strong>Main page</strong></a>
         </li>
       </ul>
       <ul>
         <!-- <a href="./charity.html">Recommended Charities</a> -->
         <li>
-          <a
-            href="./indicate.html"
-            class="contrast"
-            role="button"><strong>Indicate avalibility</strong></a
+          <a href="./indicate.html" class="contrast" role="button"
+            ><strong>Indicate avalibility</strong></a
           >
         </li>
       </ul>
@@ -38,44 +29,45 @@
     <main class="container">
       <h1>Invitiees</h1>
       <article id="jsonContainer">
-        <p><span>First Name</span><span>Last Name</span><span>Department</span></p>
-
+        <p>
+          <span>First Name</span><span>Last Name</span><span>Department</span>
+        </p>
       </article>
 
-    <script>
+      <script>
         // URL of the remote JSON file
-        const jsonUrl = './name.json';
+        const jsonUrl = "./name.json";
 
         // Function to fetch and process the JSON data
         fetch(jsonUrl)
-            .then(response => response.json())
-            .then(data => {
-                const jsonContainer = document.getElementById('jsonContainer');
-                data.forEach(item => {
-                    // Create a <p> element for each instance
-                    const paragraph = document.createElement('p');
+          .then((response) => response.json())
+          .then((data) => {
+            const jsonContainer = document.getElementById("jsonContainer");
+            data.forEach((item) => {
+              // Create a <p> element for each instance
+              const paragraph = document.createElement("p");
 
-                    // Create <span> elements for each data point
-                    const firstNameSpan = document.createElement('span');
-                    const lastNameSpan = document.createElement('span');
-                    const tagSpan = document.createElement('span');
+              // Create <span> elements for each data point
+              const firstNameSpan = document.createElement("span");
+              const lastNameSpan = document.createElement("span");
+              const tagSpan = document.createElement("span");
 
-                    // Set the text content for each <span>
-                    firstNameSpan.textContent = `${item["First Name"]} `;
-                    lastNameSpan.textContent = `${item["Last Name"]} `;
-                    tagSpan.textContent = `${item["Tag"]} `;
+              // Set the text content for each <span>
+              firstNameSpan.textContent = `${item["First Name"]} `;
+              lastNameSpan.textContent = `${item["Last Name"]} `;
+              tagSpan.textContent = `${item["Tag"]} `;
 
-                    // Append the <span> elements to the <p> element
-                    paragraph.appendChild(firstNameSpan);
-                    paragraph.appendChild(lastNameSpan);
-                    paragraph.appendChild(tagSpan);
+              // Append the <span> elements to the <p> element
+              paragraph.appendChild(firstNameSpan);
+              paragraph.appendChild(lastNameSpan);
+              paragraph.appendChild(tagSpan);
 
-                    // Append the <p> element to the container
-                    jsonContainer.appendChild(paragraph);
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    </script>
+              // Append the <p> element to the container
+              jsonContainer.appendChild(paragraph);
+            });
+          })
+          .catch((error) => console.error("Error fetching data:", error));
+      </script>
     </main>
   </body>
 </html>

@@ -85,10 +85,12 @@ article>div:nth-child(1) {
   box-shadow: 0 10px 20px aliceblue;
   border-radius: 0 2rem 2rem 2rem;
 }
-article{
+
+article {
   border-radius: 0.6rem 0.6rem 0.6rem 2rem;
 }
-.warning{
+
+.warning {
   background-color: #CFE8EF;
   border: 1px solid #1095C1;
   border-radius: 0.4rem;
